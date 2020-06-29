@@ -52,8 +52,10 @@ legend.onAdd = function() {
     
     for (var i = 0; i< labels.length; i++) {
         div.innerHTML += 
-            '<i style = "background:' + getColor(labels[i] +1) + '"></i>' +
-            labels[i] + (labels[i + 1] ? ' - ' + labels[i + 1] +'<br>' : '+');
+          
+        '<div style = "background:' + getColor(labels[i]) + '">'
+        + labels[i] + (labels[i + 1] ? ' - ' + labels[i + 1] : '+') +
+        '</div>';
     }
 
     return div;
